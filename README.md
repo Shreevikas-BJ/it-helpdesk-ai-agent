@@ -65,6 +65,8 @@ Safety Judge
    ↓
 Safe Response + Approved Diagnostic Commands
 
+---
+
 Example
 
 Input
@@ -86,7 +88,11 @@ Safety Verdict: PASS
 Approved Commands:
 - ping 8.8.8.8 -n 3
 - whoami
+
+---
+
 Project Structure
+
 it-helpdesk-ai-agent/
 │
 ├── app/
@@ -101,12 +107,16 @@ it-helpdesk-ai-agent/
 ├── requirements.txt
 │
 └── README.md
+---
+
 Getting Started
 1. Clone the repository
 git clone https://github.com/Shreevikas-BJ/it-helpdesk-ai-agent.git
 cd it-helpdesk-ai-agent
 2. Create a virtual environment
 python -m venv venv
+
+---
 
 Activate the environment:
 
@@ -124,10 +134,14 @@ python scripts/train_classifier.py --data data/helpdesk_train_big.csv --out_dir 
 
 This trains a DistilBERT-based classifier for routing helpdesk tickets into predefined support categories.
 
+---
+
 Run the Application
 streamlit run ui/app_streamlit.py
 
 Once started, open the local Streamlit URL in your browser and enter an IT support issue to test the assistant.
+
+---
 
 Safety Design
 
@@ -147,6 +161,8 @@ curl unknown-script | bash
 
 The goal is to demonstrate how agentic systems can include guardrails before interacting with operating system-level tools.
 
+---
+
 Why This Project Matters
 
 This project shows how AI can support IT operations by reducing repetitive manual triage while still keeping humans and safety controls in the loop. It combines practical machine learning, retrieval-augmented generation, local LLM usage, and workflow-based agent design into one end-to-end system.
@@ -159,11 +175,16 @@ Improve observability with structured logs and tracing
 Add evaluation metrics for retrieval quality and classifier accuracy
 Deploy the app using Docker and cloud hosting
 Expand the safety judge with policy-based validation
+
+---
+
 Author
 
 Shreevikas Bangalore Jagadish
 Graduate Student, Information Technology and Management
 Illinois Institute of Technology
+
+---
 
 GitHub: Shreevikas-BJ
 LinkedIn: shreevikasbj
