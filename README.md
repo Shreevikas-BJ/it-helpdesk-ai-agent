@@ -51,7 +51,6 @@ The system uses a combination of:
 
 ## System Workflow
 
-```text
 User Ticket
    ↓
 Ticket Classification
