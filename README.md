@@ -91,26 +91,8 @@ Approved Commands:
 
 ---
 
-**Project Structure**
+## Getting Started
 
-it-helpdesk-ai-agent/
-│
-├── app/
-│   └── Core application logic
-│
-├── scripts/
-│   └── Training and utility scripts
-│
-├── ui/
-│   └── Streamlit user interface
-│
-├── requirements.txt
-│
-└── README.md
-
----
-
-**Getting Started**
 1. Clone the repository
 git clone https://github.com/Shreevikas-BJ/it-helpdesk-ai-agent.git
 cd it-helpdesk-ai-agent
@@ -119,7 +101,7 @@ python -m venv venv
 
 ---
 
-Activate the environment:
+## Activate the environment:
 
 Windows
 
@@ -137,14 +119,14 @@ This trains a DistilBERT-based classifier for routing helpdesk tickets into pred
 
 ---
 
-Run the Application
+## Run the Application
 streamlit run ui/app_streamlit.py
 
 Once started, open the local Streamlit URL in your browser and enter an IT support issue to test the assistant.
 
 ---
 
-**Safety Design**
+## Safety Design
 
 This project includes a command safety layer to prevent risky or destructive actions. The assistant only allows a small set of diagnostic commands and blocks anything outside the approved list.
 
@@ -164,7 +146,7 @@ The goal is to demonstrate how agentic systems can include guardrails before int
 
 ---
 
-**Why This Project Matters**
+## Why This Project Matters
 
 This project shows how AI can support IT operations by reducing repetitive manual triage while still keeping humans and safety controls in the loop. It combines practical machine learning, retrieval-augmented generation, local LLM usage, and workflow-based agent design into one end-to-end system.
 
@@ -179,7 +161,7 @@ Expand the safety judge with policy-based validation
 
 ---
 
-**Author**
+## Author
 
 Shreevikas Bangalore Jagadish
 Graduate Student, Information Technology and Management
