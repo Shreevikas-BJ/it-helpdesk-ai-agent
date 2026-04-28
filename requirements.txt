@@ -1,0 +1,54 @@
+# ========================
+# Core Python environment
+# ========================
+torch                  # PyTorch (install with +cu118/+cu121 for CUDA if needed)
+torchvision
+torchaudio
+scikit-learn
+pandas
+numpy
+
+# ========================
+# LLM & embeddings
+# ========================
+transformers
+sentence-transformers
+tiktoken
+ollama                 # Python client for local Ollama LLM
+
+# ========================
+# Agentic frameworks
+# ========================
+langchain
+langchain-community    # needed for Ollama integration in LangChain
+langgraph
+
+# ========================
+# Databases / retrieval
+# ========================
+faiss-cpu              # use faiss-gpu if CUDA build is desired
+duckdb
+pydantic
+
+# ========================
+# OCR & doc parsing (for KB)
+# ========================
+unstructured
+pytesseract
+Pillow
+
+# ========================
+# UI
+# ========================
+streamlit
+
+# ========================
+# Env management
+# ========================
+python-dotenv
+
+# ========================
+# Extra utilities (logging/debugging)
+# ========================
+
+--Shreevikas Bangalore Jagadish
