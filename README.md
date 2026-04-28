@@ -1,53 +1,67 @@
-🛠️ AI Helpdesk Agent
+# AI Helpdesk Agent
 
-This project is an AI-powered IT helpdesk assistant that can classify support tickets, retrieve knowledge base articles, suggest troubleshooting steps, and safely execute diagnostic commands.
+An agentic IT helpdesk assistant that classifies support tickets, retrieves relevant knowledge base articles, recommends troubleshooting steps, and safely validates diagnostic commands before execution.
 
-🚀 What it does
+This project demonstrates how **LLMs, RAG, workflow orchestration, and safety guardrails** can be combined to automate common IT support workflows while keeping command execution controlled and auditable.
 
-Classifies tickets (VPN, Wi-Fi, Printer, Password Reset, etc.)
+---
 
-Retrieves and reranks knowledge base articles (RAG)
+## Overview
 
-Suggests fixes (templates or LLM via Ollama)
+IT helpdesk teams often handle repetitive support issues such as VPN failures, Wi-Fi problems, printer errors, password resets, and basic system diagnostics. This project builds an AI-powered support assistant that can understand a user issue, classify the ticket, retrieve relevant knowledge, generate a response, and verify whether suggested commands are safe.
 
-Executes only safe commands (ping, ipconfig, whoami, echo)
+The system uses a combination of:
 
-Blocks unsafe commands with a strict safety judge
+- **Ticket Classification** for routing support issues
+- **RAG Retrieval** for knowledge-grounded answers
+- **LangGraph Workflow Orchestration** for multi-step agent flow
+- **Safety Judge** to block unsafe command execution
+- **Streamlit UI** for an interactive user interface
 
-🏗️ Tech Stack
+---
 
-PyTorch (DistilBERT, CUDA for GPU acceleration)
+## Key Features
 
-LangChain + LangGraph
+- Classifies IT support tickets into categories such as VPN, Wi-Fi, printer, and password reset
+- Retrieves relevant knowledge base articles using FAISS-based semantic search
+- Reranks retrieved results using a cross-encoder for better answer quality
+- Generates troubleshooting suggestions using templates or a local LLM through Ollama
+- Allows only safe diagnostic commands such as `ping`, `ipconfig`, `whoami`, and `echo`
+- Blocks unsafe commands through a strict safety validation layer
+- Provides an interactive Streamlit interface for testing support scenarios
+- Supports GPU acceleration for model training and inference when CUDA is available
 
-FAISS + Cross-Encoder
+---
 
-Ollama (Mistral LLM)
+## Tech Stack
 
-Streamlit UI
+| Category | Tools / Libraries |
+|---|---|
+| Language | Python |
+| ML / Deep Learning | PyTorch, DistilBERT |
+| Agent Framework | LangChain, LangGraph |
+| Retrieval | FAISS |
+| Reranking | Cross-Encoder |
+| LLM Runtime | Ollama, Mistral |
+| UI | Streamlit |
+| Acceleration | CUDA |
+| Environment | pip, virtual environment |
 
-⚡ Quickstart
-# Clone repo
-git clone https://github.com/your-username/ai-helpdesk-agent.git
-cd ai-helpdesk-agent
+---
 
-# Install dependencies
-pip install -r requirements.txt
+## System Workflow
 
-# Train classifier
-python scripts/train_classifier.py --data data/helpdesk_train_big.csv --out_dir checkpoints/helpdesk-classifier --epochs 3
-
-# Run Streamlit app
-streamlit run ui/app_streamlit.py
-
-📊 Example
-
-Input:
-"My VPN disconnects every 10 minutes."
-
-Output:
-Category → vpn_issue
-Verdict → PASS
-Commands → ping 8.8.8.8 -n 3, whoami
-
-Powered by RAG + CUDA acceleration + Ollama to bring AI into IT support.
+```text
+User Ticket
+   ↓
+Ticket Classification
+   ↓
+Knowledge Base Retrieval
+   ↓
+Document Reranking
+   ↓
+Troubleshooting Plan Generation
+   ↓
+Safety Judge
+   ↓
+Safe Response + Approved Diagnostic Commands
