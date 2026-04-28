@@ -52,17 +52,17 @@ The system uses a combination of:
 ## System Workflow
 
       User Ticket
-         ↓
+            ↓
       Ticket Classification
-         ↓
+               ↓
       Knowledge Base Retrieval
-            ↓
+                  ↓
       Document Reranking
-            ↓
+                  ↓
       Troubleshooting Plan Generation
-         ↓
-         Safety Judge
-         ↓
+               ↓
+      Safety Judge
+               ↓
       Safe Response + Approved Diagnostic Commands
 
 ---
