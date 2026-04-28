@@ -67,7 +67,7 @@ Safe Response + Approved Diagnostic Commands
 
 ---
 
-Example
+## Example
 
 Input
 
@@ -91,7 +91,7 @@ Approved Commands:
 
 ---
 
-Project Structure
+**Project Structure**
 
 it-helpdesk-ai-agent/
 │
@@ -107,9 +107,10 @@ it-helpdesk-ai-agent/
 ├── requirements.txt
 │
 └── README.md
+
 ---
 
-Getting Started
+**Getting Started**
 1. Clone the repository
 git clone https://github.com/Shreevikas-BJ/it-helpdesk-ai-agent.git
 cd it-helpdesk-ai-agent
@@ -143,7 +144,7 @@ Once started, open the local Streamlit URL in your browser and enter an IT suppo
 
 ---
 
-Safety Design
+**Safety Design**
 
 This project includes a command safety layer to prevent risky or destructive actions. The assistant only allows a small set of diagnostic commands and blocks anything outside the approved list.
 
@@ -163,7 +164,7 @@ The goal is to demonstrate how agentic systems can include guardrails before int
 
 ---
 
-Why This Project Matters
+**Why This Project Matters**
 
 This project shows how AI can support IT operations by reducing repetitive manual triage while still keeping humans and safety controls in the loop. It combines practical machine learning, retrieval-augmented generation, local LLM usage, and workflow-based agent design into one end-to-end system.
 
@@ -178,7 +179,7 @@ Expand the safety judge with policy-based validation
 
 ---
 
-Author
+**Author**
 
 Shreevikas Bangalore Jagadish
 Graduate Student, Information Technology and Management
